@@ -1,0 +1,28 @@
+So for testing the addPlayList() method, there were really three things we were concerned about:
+1) The playlist was successfully added
+		We tested this by adding a playlist1 to a playlist2, and then checking to make sure that the first item in playlist2 
+		is in fact playlist 1
+2) The addPlayList() method returns true when a playlist is successfully added.
+		We tested for this pretty much the same way as we did 1), except we tested to make sure that it returned true when done
+3) Duplicates aren't allowed to be added to a playlist
+		We tested this by adding a playlist to a playlist, and then trying to add the same playlist again, which returns false
+
+For the addPlayable() method, there was even less that we had to check. We were mainly concerned with two things:
+1) The Playable was successfully added
+		We tested for this the same we did for addPlayList()
+2) The addPlayable() method returns true when a Playable is successfully added
+		We tested for this the same way we did for addPlayList()
+		
+There were a lot more things that had to be taken into consideration for loadMedia():
+1) It adds a simple song with no complications
+2) It adds a song with comments 
+3) It correctly calculates the number of minutes when a song's duration is displayed incorrectly
+4) It correctly calculates the number of seconds when a song's duration is displayed incorrectly
+5) If a text file has spaces, it is able to look past the spaces and correctly add the song
+6) If a text file has both spaces and comments, it is able to correctly add the song
+7) It is able to distinguish between a song and a video based on the input, and add them as such to the playlist
+8) It adds a simple song with no complications
+9) It adds a video with comments
+10) It adds a video with "trickier" comments, such as lines with only comments
+11) It correctly reads and adds "http://" to the youtube address
+12) It deals correctly with varying capitalization of youtube
